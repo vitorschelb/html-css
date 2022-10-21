@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes externas</title>
+    <style>
+        @font-face {
+
+            font-family: 'blue';
+            src: url('Bluetea.otf') format('opentype'), url('Bluetea.ttf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+          
+            /* Tipos de Format()
+                -opentype (otf)
+                -truetype (ttf)
+                -embedded-opentype
+                -truetype-aat (Apple Advanced Typography)
+                -svg */
+        }
+        body {
+            font-family: 'blue';
+            text-align: justify;
+        }
+        p {
+            font-family: 'blue';
+        }
+        h1 {
+            font-family: 'energy';
+            font-size: 3em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Título</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, obcaecati vero. Nobis eius at, sapiente deleniti vel asperiores eos dolorem expedita voluptas ad blanditiis tempore odio, fugiat veniam placeat. Facilis quo, ipsum debitis maxime quia possimus pariatur odit itaque a eaque reiciendis, magni voluptas nesciunt exercitationem similique eius molestias veritatis.</p>
+</body>
+</html>

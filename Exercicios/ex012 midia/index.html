@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áudio no Site</title>
+</head>
+<body>
+    <h1>Reproduzindo Audio</h1>
+
+    <p>Vamos aprender a reproduzir audio em duas maneiras</p>
+    <u>
+        <li>Maneira mais capenga</li><br>
+
+    <audio src="midia/musica1.mp3" controls autoplay loop></audio>
+
+        <li>Maneira melhorsinha</li>
+
+        <audio preload="metadata" controls>
+            <source src="midia/musica1.mp3" type="audio/mpeg">
+        </audio>
+    </u>
+    <!--Formatos mais compactiveis MP3 WAV(pesado) OGG-->
+
+    <h1>Vídeos com HTML5</h1>
+    <h2>Vídeos hospedados localmente</h2>
+    <p>Este video esta hospedado em meu próprio servidor</p>
+
+    <video src="midia/video3.webm" controls></video>
+
+    <!-- Lembre-se de colocar todos os formatos, para safari inclusive. Precisa ser compativel com todos-->
+    
+    <video width="500" poster="image/helena.png" controls>
+        <source src="midia/video1.mp4" type="video/mp4">
+        <source src="midia/video3.webm" type="video/webm">
+        <p>Seu navegador não tem compatibilidade com videos.</p>
+    </video>
+<!-- O teste de compatibilidade é feito em ordem-->
+
+<h1>Inserindo vídeos externos</h1>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FdE5G95B7Mg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<!-- O SEGUNDO MAIOR BUSCADOR DO MUNDO É O YOUTUBE! USA O YOUTUBE!!!!! NO SITEEEEES!!!-->
+</body>
+</html>

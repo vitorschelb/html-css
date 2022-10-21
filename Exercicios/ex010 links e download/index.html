@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links e Âncoras</title>
+</head>
+<body>
+    <h1>Links Externos</h1>
+    <p>Você pode acessar o meu <a href="https://github.com/gustavoguanabara/html-css/blob/master/aulas-pdf/10%20-%20Liga%C3%A7%C3%B5es%20em%20toda%20parte.pdf" target="_blank" rel="external">repositório público no GitHub</a></p>
+
+    <!--SEMPRE USE TARGET _BLANK E REL EXTERNAL PARA MANTER A JANELA DO SEU SITE!!!!!!! IMPORTANTISSIMO-->
+
+    <h1>Links Internos</h1>
+    
+    <p>Essa é a primeira página do meu site, se você quiser pode acessar minha <a href="pag002.html" rel="next"> segunda página</a></p>
+
+    <!--NÃO EXISTE REL INTERNAL, MAS EXISTE O ANTERIOR E PROXIMO INCLUSIVE AJUDA NO SEO DO GOOGLE-->
+
+    <p>Você também pode acessar minha página de <a href="noticia/pag003.html" rel="next" target="_self">noticias</a></p>
+
+    <!--USAR O TARGET SELF PARA INDICAR QUE É NO PROPRIO SITE-->
+
+    <h2>Links para Download</h2>
+    <ul>
+        <li><a href="livro/desafio-tags.pdf" download="desafio-tags.pdf" type="application/pdf">Baixar o livro em PDF</a></li>
+        <li><a href="livro/desafio-tags.rar" download="desafio-tags.rar" type="application/rar">Baixar RAR</a></li>
+    </ul>
+</body>
+</html>
