@@ -1,5 +1,3 @@
-#html-css
-
 <h1 align="center">Hi, I'm Vitor Schelb</h1>
 <h3 align="center">Currently learning Web Development</h3>
 
