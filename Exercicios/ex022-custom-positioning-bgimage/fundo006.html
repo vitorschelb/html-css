@@ -13,11 +13,17 @@
             background-repeat: no-repeat;
             background-position: center center;
             background-size: cover; /*contain 100% independente sem corte, o cover ocupa sempre tudo mas corta se precisar*/
+            background-attachment: fixed; /* fixa a tela e o conteúdo que mexe*/
 
+            /* SHORTHAND BACKGROUND
+            color > image > position > repeat > [size] (NÃO FUNCIONA)> attachment*/
+
+            background: black url('images/wallpaper003.jpg') center center no-repeat fixed;
+            background-size: cover;
         }
         main {
             background-color: white;
-            width: 400px;
+            max-width: 400px; /*lembrar da responsividade! max para rodar em celulares*/
             margin: auto;
             padding: 10px;
             border: 1px solid darkblue;
@@ -29,7 +35,7 @@
 <body>
     <main>
         <h1>Background test</h1>   
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex totam libero et in repellat, laborum commodi incidunt rerum nemo quis quas dolores facere quae odit aperiam reprehenderit quaerat sequi nesciunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit veniam non eum dicta reiciendis. Ducimus vel, consequuntur facilis, officiis voluptas alias repellat sed iure deleniti, eum placeat unde porro laudantium. Commodi inventore fugiat voluptates natus! Sequi tenetur doloribus optio asperiores recusandae, modi neque! Debitis aut delectus eaque placeat numquam et vero ratione quo optio assumenda id, architecto autem dolor atque nobis ipsum veniam, illum quidem nisi eius voluptatum voluptatibus pariatur sequi. Distinctio maiores, asperiores, placeat facere culpa deserunt debitis optio error, voluptate eaque soluta a corporis quam libero sed dolores consequatur modi magnam et nesciunt. In rem ducimus nesciunt expedita, beatae odit impedit officia? Harum eligendi et vitae? Enim fuga iusto minus omnis dignissimos magni impedit at, autem, aliquam eligendi provident, vel saepe inventore? Expedita totam aut enim eos quos sequi molestias ex in minus quas quod laudantium, voluptatibus at consequuntur praesentium voluptas voluptatum quam ullam pariatur, doloribus velit optio nobis? Quas inventore consectetur, labore dignissimos velit consequatur ducimus error maxime quaerat expedita amet quod sed sint reiciendis nihil blanditiis voluptate corrupti adipisci a asperiores nulla. Tempora nobis illum sint vero eveniet quasi architecto non eius dignissimos necessitatibus, cumque voluptatum maxime quaerat odit iste minus nihil nam aut pariatur ratione deleniti. Magni dicta at obcaecati numquam cupiditate rem dolor ad, veritatis accusamus deleniti consectetur itaque! Consectetur natus nulla mollitia, quidem accusamus dolor rem deleniti voluptatibus necessitatibus! Ea, deleniti nobis? Sapiente, placeat sunt iste vitae fugiat enim aspernatur molestias praesentium corrupti a velit. Accusantium molestias facere laudantium minus asperiores aperiam laboriosam libero. Eligendi mollitia nulla ut cumque et molestias molestiae aspernatur nihil, nesciunt numquam tempora. Odit voluptate, mollitia distinctio itaque blanditiis natus ab modi ducimus sit aliquam iste fuga eum nulla perferendis quam placeat dicta fugit, ad nostrum quaerat hic laboriosam nisi nihil. Quae eius odio ratione natus repellat iure sit commodi, id, voluptatem ea, nisi tempore. Est sunt eius nesciunt at dignissimos eligendi officiis quod nemo, distinctio neque laboriosam architecto impedit, fugit deleniti alias tempora reiciendis mollitia voluptas dolore vero sint a facere magni! Blanditiis eaque, possimus quia quod deleniti soluta delectus id? Sint hic molestiae nesciunt assumenda laborum, laboriosam repellendus recusandae ex! Non sunt sed soluta esse, rem recusandae nostrum modi beatae labore ullam minima vitae illum aut accusamus cum facilis vero excepturi fugit fugiat dolor repellat quia perspiciatis tempora? Dolores, est repellendus non similique atque ratione. Eos dolor totam maxime possimus magnam ducimus autem distinctio inventore minima at?</p>
 
     </main>
     
