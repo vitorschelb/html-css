@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Imagem de Fundo</title>
+    <style>
+        body {
+            background-image: url('images/wallpaper001.jpg');
+        }
+        
+        div.quadrado {
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+            display: inline-block;
+            background-color: antiquewhite;
+            border-radius: 10px;
+            box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.173);
+            
+        }
+        div.quadrado:hover {
+            background-color: var(--cor3);
+            color: var(--cor5);
+            transform: scale(0.5);
+            box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.173);
+            transition-duration: 1s;
+
+        }
+
+        div#q1 {
+            background-color: rgb(238, 110, 51);
+        
+        }
+        div#q2 {
+            background-image: linear-gradient(to bottom, yellow, red );
+        }
+        div#q3 {
+        background-image: url('images/pattern003.png');
+
+        }
+        div.retangulo {
+            border: 2px solid black;
+            width: 910px;
+            height: 400px;
+            display: block;
+            background-color: blue;
+            border-radius: 10px;
+            box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.173);
+            
+
+        }
+
+
+        div.retangulo:hover {
+            background-color: var(--cor3);
+            color: var(--cor5);
+            width: 1280px;
+            height: 853px;
+            transition-duration: .3s;
+            box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.173);
+            /* Como fazer o Hoover sobrepor o retangulo azul */
+            
+        }
+
+        div#r1 {
+            background-image: url('images/wallpaper002.jpg');
+
+        }
+        div.lateral {
+            border: 2px solid black;
+            width: 300px;
+            height: 710px;
+            display: inline-block;
+            background-color: blue;
+            border-radius: 10px;
+            box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.173); /* Como colocar ela lateralmente ocupando do topo até a ultima imagem (Conferir se a maneira esta correta*/
+            position: relative;
+            left: 920px;
+            top: -710px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="quadrado" id="q1"></div>
+    <div class="quadrado" id="q2"></div>
+    <div class="quadrado" id="q3"></div>
+    <div class="retangulo" id="r1"></div>
+    <div class="lateral" id="l1"></div>
+</body>
+</html>
