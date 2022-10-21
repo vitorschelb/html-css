@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+</head>
+<style>
+    body {
+        background-image: url('images/wallpaper003.jpg');
+        background-size: 100px 80px;
+        background-repeat: no-repeat;
+        background-position: center center; /* 
+        IMPORTANTE
+        
+        Se não declarar a porcentagem da height em relação a viewport o posicionamento fica em cima, por que o body por padrão é fino. Esse posicionamento serve de ANCORAGEM no BODY, como NÃO tem conteudo no BODY, ele aparece fino. Pode-se também adicionar conteúdo para visualizar o alinhamento. A centralização acompanha o conteúdo do BODY. No caso adicionei os dois para compreensão, VH (ViewPort HEIGHT e conteúdo. Com o View Port ele alinha 100% de acordo com o navegador, sem declaração ele acompanha 100% o conteúdo do body*/
+        border: 3px dashed black;
+        height: 98vh;
+    }
+
+    body > h1 {
+        color:aqua ;
+    }
+</style>
+<body>
+    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At veritatis aperiam porro odio maiores expedita amet dolor vitae fuga, minima modi officia provident, iste aut illum quidem cumque vero temporibus! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error quam hic rem iusto ex sint odio molestias impedit animi quia. Quisquam nesciunt, dolorem sit laborum molestias quo ea cupiditate Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem laudantium nesciunt, ab, culpa vero nostrum corporis esse repellat odio commodi sunt voluptatem molestias et aperiam? Iusto quam eum sed id.</h1>
+</body>
+</html>
