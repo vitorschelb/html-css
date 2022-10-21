@@ -56,9 +56,8 @@ header > p {
     font-size: 1.2em;
     color: white;
     max-width: 600px;
-    padding: 0px 10px 0px 10px;
+    padding: 0px 10px 50px 10px;
     margin: auto;
-    margin-bottom: 20px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.256);
 
 }
@@ -197,7 +196,7 @@ aside > h3 {
 
 aside > ul {
     list-style-position: inside;
-    list-style-type: '\2714\00A0';
+    list-style-type: '\2714';
     columns: 2;
 
 }
