@@ -5,7 +5,7 @@
 <p align="left">
 </p>
 
-<p align="center"> <a href="https://vitorschelb.github.io/html-css/desafios/d010corrigido/index.html"> First exercise</a>
+</p style='text-align:center'><a href="https://vitorschelb.github.io/html-css/desafios/d010corrigido/index.html"> First exercise</a> </p>
 <p align="center"> <a href="https://vitorschelb.github.io/html-css/desafios/d012/index.html"> Second exercise</a>
 
 <h3 align="center">Languages and Tools:</h3>
