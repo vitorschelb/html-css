@@ -32,7 +32,7 @@ header {
 }
 
 header > h1 {
-    font-size: 10vw;
+    font-size: 5em;
     font-weight: bolder;
     font-variant: small-caps;
     letter-spacing: 3px;
@@ -50,13 +50,50 @@ header > p {
 
 main {
     font-family: var(--fonte-padrao);
-
 }
 
 main > section.branco {
     font-size: 3.5vw;
     line-height: 2em;
     padding: 70px 0px 60px 30px
+}
+
+section.branco > p {
+    padding-bottom: 2em;
+}
+
+main > section.imagem {
+    background-color: rgba(0, 0, 0, 0.874);
+    color: white;
+    font-size: 3.5vw;
+    line-height: 2em;
+    padding: 70px 0px 60px 30px;
+}
+
+section.imagem > p {
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.667);
+    color: white;
+    font-size: 3.5vw;
+    line-height: 2em;
+}
+
+main > section#img1 {
+    background-image: url('images/background001.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: right center;
+
+}
+
+main > section#img2 {
+    background-image: url('images/background002.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: right center;
 }
 
 footer {
