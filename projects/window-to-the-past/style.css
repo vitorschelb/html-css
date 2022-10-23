@@ -16,10 +16,10 @@
     margin: 0px;
     padding: 0px;
     font-size: 1em;
-}
+} 
+
 body {
     background: white;
-    min-height: 100vh;
 }
 
 header{
@@ -79,19 +79,14 @@ section#img1 {
 }
 
 section#img2 {
-    background: #ffecc6 url('images/img2.png') right center fixed;
-    background-repeat: no-repeat;
+    background: #ffecc6 url('images/img2.png') right center no-repeat fixed;
+    background-size: auto; 
 }
 
 section#img2 > p {
-    width: 300px;
-    height: 650px;
-    transform: translate(70%, 0%);
 }
-
 section#img2 > h2 {
-    width: 300px;
-    transform: translate(70%, 0%);
+
 }
 
 section#img3 {
@@ -100,11 +95,9 @@ section#img3 {
 }
 
 section#img3 > h1 {
-    width: 300px;
 }
 
 section#img3 > p {
-    height: 380px;
 }
 
 section#img4 {
@@ -114,8 +107,6 @@ section#img4 {
 }
 
 section#img4 > h2 {
-    transform: translate(355%, 0%);
 }
 section#img4 > p {
-    transform: translate(355%, 0%);
 }
