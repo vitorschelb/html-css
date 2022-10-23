@@ -20,6 +20,7 @@
 
 body {
     background: white;
+    min-height: 100vh;
 }
 
 header{
@@ -31,7 +32,7 @@ header{
 header > h1 {
     font-family: var(--fonte-destaque);
     font-weight: normal;
-    font-size: 5em;
+    font-size: 4em;
     padding-top: 50px;
 }
 
@@ -39,33 +40,26 @@ header > p {
     font-family:'Times New Roman', Times, serif;
     font-size: 1.2em;
     padding-bottom: 50px;
+    line-height: 2em;
+    font-size: 3.5vw;
 }
 
 section {
+    font-family: var(--fonte-escrito);
     padding-top: 10vh;
     padding-bottom: 10vh;
     padding-left: 30px;
-    line-height: 2em;
-    font-family: var(--fonte-escrito);
-    font-size: 1em;
-    text-align: justify;
-    font-weight: bold;
 }
 
 section.image > h2 {
     text-align: center;
-    width: 300px;
     background-color: rgba(0, 0, 0, 0.43);
-    padding: 10px;
     color: white
 }
 
 section.image > p {
     display: inline-block;
     background-color: rgba(0, 0, 0, 0.43);
-    width: 300px;
-    height: 350px;
-    padding: 10px;
     color: white;
     text-indent: 10px;
 }
