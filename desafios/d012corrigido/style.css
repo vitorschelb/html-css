@@ -6,7 +6,6 @@
     font-weight: normal;
 }
 
-
 :root {
     --fonte-destaque: 'passion', Verdana, Helvetica, sans-serif;
     --fonte-padrao: 'Sriracha', 'cursive';
@@ -20,6 +19,7 @@
 
 body {
     background:white;
+    min-height: 100vh;
 
 }
 
@@ -28,11 +28,19 @@ header {
     color: white;
     text-align: center;
     background-color: black;
+}
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 header > h1 {
-    font-size: 5em;
+    font-size: 4em;
     font-weight: bolder;
     font-variant: small-caps;
     letter-spacing: 3px;
@@ -52,34 +60,27 @@ main {
     font-family: var(--fonte-padrao);
 }
 
-main > section.branco {
-    font-size: 3.5vw;
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
     line-height: 2em;
-    padding: 70px 0px 60px 30px
+    font-family: var(--fonte-padrao);
+    font-size: 3.5vw;
 }
 
 section.branco > p {
     padding-bottom: 2em;
 }
 
-main > section.imagem {
-    background-color: rgba(0, 0, 0, 0.874);
-    color: white;
-    font-size: 3.5vw;
-    line-height: 2em;
-    padding: 70px 0px 60px 30px;
-}
-
 section.imagem > p {
     display: inline-block;
-    padding: 5px;
     background-color: rgba(0, 0, 0, 0.667);
     color: white;
-    font-size: 3.5vw;
-    line-height: 2em;
+    padding: 5px;
 }
 
-main > section#img1 {
+section#img1 {
     background-image: url('images/background001.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -88,7 +89,7 @@ main > section#img1 {
 
 }
 
-main > section#img2 {
+section#img2 {
     background-image: url('images/background002.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -103,14 +104,3 @@ footer {
     color: white;
     padding: 10px;
 }
-
-footer a {
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
