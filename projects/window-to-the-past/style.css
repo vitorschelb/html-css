@@ -47,7 +47,7 @@ section {
     padding-left: 30px;
     line-height: 2em;
     font-family: var(--fonte-escrito);
-    font-size: 1.1vw;
+    font-size: 1em;
     text-align: justify;
     font-weight: bold;
 }
