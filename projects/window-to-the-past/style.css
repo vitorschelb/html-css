@@ -1,0 +1,121 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+
+:root {
+    --cor0: #7D632F;
+    --cor1: #ffecc6;
+    --cor2: #FCC860;
+    --cor3: #7D6C4A;
+    --cor4: #CCA14D;
+    --fonte-destaque: 'Great Vibes';
+    --fonte-escrito: 'Petit Formal Script';
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+}
+body {
+    background: white;
+    min-height: 100vh;
+}
+
+header{
+    background-color: var(--cor3);
+    color: var(--cor1);
+    text-align: center;
+}
+
+header > h1 {
+    font-family: var(--fonte-destaque);
+    font-weight: normal;
+    font-size: 5em;
+    padding-top: 50px;
+}
+
+header > p {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.2em;
+    padding-bottom: 50px;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    line-height: 2em;
+    font-family: var(--fonte-escrito);
+    font-size: 1.1vw;
+    text-align: justify;
+    font-weight: bold;
+}
+
+section.image > h2 {
+    text-align: center;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.43);
+    padding: 10px;
+    color: white
+}
+
+section.image > p {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.43);
+    width: 300px;
+    height: 350px;
+    padding: 10px;
+    color: white;
+    text-indent: 10px;
+}
+
+section#img1 {
+    background-color: #FCC860;
+    background-image: url('images/img1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section#img2 {
+    background: #ffecc6 url('images/img2.png') right center fixed;
+    background-repeat: no-repeat;
+}
+
+section#img2 > p {
+    width: 300px;
+    height: 650px;
+    transform: translate(70%, 0%);
+}
+
+section#img2 > h2 {
+    width: 300px;
+    transform: translate(70%, 0%);
+}
+
+section#img3 {
+    background: #ffecc6 url('images/img3.jpg') right top no-repeat fixed;
+    background-size: cover;    
+}
+
+section#img3 > h1 {
+    width: 300px;
+}
+
+section#img3 > p {
+    height: 380px;
+}
+
+section#img4 {
+    background: #ffecc6 url('images/img4.png') right top no-repeat fixed;
+    background-size: contain;
+    background-position: left;
+}
+
+section#img4 > h2 {
+    transform: translate(355%, 0%);
+}
+section#img4 > p {
+    transform: translate(355%, 0%);
+}
