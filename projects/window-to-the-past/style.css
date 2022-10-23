@@ -67,17 +67,17 @@ section.image > p {
     text-shadow: 1px 1px 0px black;
     word-spacing: 3px;
     line-height: 1.5em;
-    font-family: var(--fonte-teste2);
+    font-family: var(--fonte-escrito);
 }
 
 section.image > h2 {
-    font-family: var(--fonte-teste);
+    font-family: var(--fonte-teste2);
     padding-top: 1em;
     padding-bottom: .5em;
     border-radius: 0px 20px 0px 0px;
     text-shadow: 1px 1px 0px black;
     font-size: 4vw;
-    font-variant: small-caps;
+    font-weight: normal;
 }
 
 section.image > h2 {
