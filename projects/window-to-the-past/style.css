@@ -46,14 +46,18 @@ header > p {
 
 section.image {
     font-family: var(--fonte-escrito);
+    text-align: justify;
     padding-top: 10vh;
-    padding-bottom: 10vh;
+    padding-bottom: 50vh;
     padding-left: 2vh;
-    padding-right: 2vh;
+    padding-right: 25vh;
+    font-size: 2.5vw;
 }
 
 section.image > p {
     padding-bottom: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 section.image > h2 {
@@ -82,20 +86,9 @@ section#img1 {
     background-attachment: fixed;
 }
 
-section#img1 > p {
-    width: 50vh;
-    height: 50vh;
-}
-
 section#img2 {
     background: #ffecc6 url('images/img2.png') right center no-repeat fixed;
-    background-size: cover; 
-}
-
-section#img2 > p {
-}
-section#img2 > h2 {
-
+    background-size: cover;
 }
 
 section#img3 {
@@ -103,19 +96,8 @@ section#img3 {
     background-size: cover;    
 }
 
-section#img3 > h1 {
-}
-
-section#img3 > p {
-}
-
 section#img4 {
     background: #ffecc6 url('images/img4.png') right top no-repeat fixed;
-    background-size: contain;
+    background-size: cover;
     background-position: left;
-}
-
-section#img4 > h2 {
-}
-section#img4 > p {
 }
