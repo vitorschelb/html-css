@@ -52,23 +52,28 @@ section.image {
     padding-right: 25vh;
     font-size: 2.5vw;
     background-color: #ffecc6;
+    
 }
 
 section.image > p {
     padding-bottom: 2em;
     padding-left: 2em;
     padding-right: 2em;
-
+    border-radius: 0px 0px 0px 20px;
+    box-shadow: 2px 6px 6px 0px rgba(0, 0, 0, 0.349);
+    text-shadow: 1px 1px 0px black;
 }
 
 section.image > h2 {
     padding-top: 2em;
     padding-bottom: 1em;
+    border-radius: 0px 20px 0px 0px;
+    text-shadow: 1px 1px 0px black;
 }
 
 section.image > h2 {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.43);
+    background-color: rgba(0, 0, 0, 0.547);
     color: white
 }
 
