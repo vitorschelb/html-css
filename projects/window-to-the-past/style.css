@@ -58,6 +58,7 @@ section.image > p {
     padding-bottom: 2em;
     padding-left: 2em;
     padding-right: 2em;
+
 }
 
 section.image > h2 {
@@ -73,7 +74,7 @@ section.image > h2 {
 
 section.image > p {
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.43);
+    background-color: rgba(0, 0, 0, 0.547);
     color: white;
     text-indent: 10px;
 }
