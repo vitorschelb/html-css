@@ -13,7 +13,7 @@
 }
 
 * {
-    margin: 0px;
+    margin: 0 auto;
     padding: 0px;
     font-size: 1em;
     
@@ -52,12 +52,14 @@ section.image {
     padding-left: 2vh;
     padding-right: 25vh;
     font-size: 2.5vw;
+    contain: content;
 }
 
 section.image > p {
     padding-bottom: 2em;
     padding-left: 2em;
     padding-right: 2em;
+    content: normal;
 }
 
 section.image > h2 {
@@ -79,25 +81,26 @@ section.image > p {
 }
 
 section#img1 {
-    background-color: #FCC860;
+    background-color: #ffecc6;
     background-image: url('images/img1.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% auto;
     background-attachment: fixed;
 }
 
 section#img2 {
-    background: #ffecc6 url('images/img2.png') right center no-repeat fixed;
-    background-size: cover;
+    background: #ffecc6 url('images/img2.png') right top no-repeat fixed;
+    background-size: 100% auto;
+
 }
 
 section#img3 {
     background: #ffecc6 url('images/img3.jpg') right top no-repeat fixed;
-    background-size: cover;    
+    background-size: 100% auto; 
 }
 
 section#img4 {
-    background: #ffecc6 url('images/img4.png') right top no-repeat fixed;
-    background-size: cover;
-    background-position: left;
+    background: #ffecc6 url('images/img4.png') right bottom no-repeat fixed;
+    background-size: 100% auto;
+
 }
