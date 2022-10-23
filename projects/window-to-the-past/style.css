@@ -1,6 +1,8 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
 :root {
     --cor0: #7D632F;
@@ -10,6 +12,8 @@
     --cor4: #CCA14D;
     --fonte-destaque: 'Great Vibes';
     --fonte-escrito: 'Petit Formal Script';
+    --fonte-teste: 'Amatic SC';
+    --fonte-teste2: 'Courgette';
 }
 
 * {
@@ -44,7 +48,6 @@ header > p {
 }
 
 section.image {
-    font-family: var(--fonte-escrito);
     text-align: justify;
     padding-top: 10vh;
     padding-bottom: 50vh;
@@ -62,13 +65,19 @@ section.image > p {
     border-radius: 0px 0px 0px 20px;
     box-shadow: 2px 6px 6px 0px rgba(0, 0, 0, 0.349);
     text-shadow: 1px 1px 0px black;
+    word-spacing: 3px;
+    line-height: 1.5em;
+    font-family: var(--fonte-teste2);
 }
 
 section.image > h2 {
-    padding-top: 2em;
-    padding-bottom: 1em;
+    font-family: var(--fonte-teste);
+    padding-top: 1em;
+    padding-bottom: .5em;
     border-radius: 0px 20px 0px 0px;
     text-shadow: 1px 1px 0px black;
+    font-size: 4vw;
+    font-variant: small-caps;
 }
 
 section.image > h2 {
