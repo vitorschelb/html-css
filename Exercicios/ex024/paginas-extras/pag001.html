@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Site</title>
+    <style>
+        * {
+          margin: auto;
+          padding: auto;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            width: 350px;
+            border-collapse: collapse;
+            box-shadow: 2px 1px 5px 0px rgba(0, 0, 0, 0.285);
+            position: relative;
+            background-color: white;
+        }
+        thead > tr > th {
+            position: sticky;
+            top: 0px;
+            background-color: blanchedalmond;
+        }
+        caption {
+            padding: 8px;
+            background-color: rgb(251, 223, 182);
+            font-weight: bold;
+            box-shadow: 2px 1px 5px 0px rgba(0, 0, 0, 0.285);
+        }
+        thead, tfoot {
+            font-variant: small-caps;
+            background-color: blanchedalmond;
+            color: black;
+        }
+        tbody > tr:nth-child(2n){
+            background-color: rgb(255, 249, 239);
+        }
+        td, th {
+            border: 1px solid black;
+            text-align: right;
+            padding: 8px;
+        }
+        tr:hover {
+            border: 2px solid rgb(0, 0, 0);
+            font-weight: bold;
+            box-shadow: 2px 1px 2px 0px rgba(0, 0, 0, 0.434);
+        }
+        th.cbc {
+            text-align: center;
+        }
+        td.estado {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        ANATOMIA PARA TABELAS GRANDES
+        CAPTION
+        THEAD
+            TR TD TH
+        TBODY
+            TR TD TH
+        TFOOT
+            TR TD TH
+    -->
+<section class="tabela">
+    <table>
+        <caption>População das Unidades Federativas</caption>
+        <thead>
+            <th scope="col" style="text-align: left;">Estado</th>
+            <th scope="col" style="width: 50px;">População</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="estado"> São Paulo</td>
+                <td>41.262.199</td>
+            </tr>
+            <tr>
+                <td class="estado">Minas Gerais</td>
+                <td>19.597.330</td>
+            </tr>
+            <tr>
+                <td class="estado">Rio de Janeiro</td>
+                <td>15.989.929</td>
+            </tr>
+            <tr>
+                <td class="estado">Bahia</td>
+                <td>14.016.906</td>
+            </tr>
+            <tr>
+                <td class="estado">Paraná</td>
+                <td>10.444.526</td>
+            </tr>
+            <tr>
+                <td class="estado">Rio Grande do Sul</td>
+                <td>10.693.929</td>
+            </tr>
+            <tr>
+                <td class="estado">Pernambuco</td>
+                <td>8.796.448</td>
+            </tr>
+            <tr>
+                <td class="estado">Ceará</td>
+                <td>8.452.381</td>
+            </tr>
+            <tr>
+                <td class="estado">Pará</td>
+                <td>7.581.051</td>
+            </tr>
+            <tr>
+                <td class="estado">Santa Catarina</td>
+                <td>6.248.436</td>
+            </tr>
+            <tr>
+                <td class="estado">Goiás</td>
+                <td>6.003.788</td>
+            </tr>
+            <tr>
+                <td class="estado">Maranhão</td>
+                <td>6.574.789</td>
+            </tr>
+            <tr>
+                <td class="estado">Amazonas</td>
+                <td>3.483.985</td>
+            </tr>
+            <tr>
+                <td class="estado">Espírito Santo</td>
+                <td>3.514.952</td>
+            </tr>
+            <tr>
+                <td class="estado">Paraíba</td>
+                <td>3.766.528</td>
+            </tr>
+            <tr>
+                <td class="estado">Mato Grosso</td>
+                <td>3.035.122</td>
+            </tr>
+            <tr>
+                <td class="estado">Rio Grande do Norte</td>
+                <td>3.168.027</td>
+            </tr>
+            <tr>
+                <td class="estado">Alagoas</td>
+                <td>3.120.494</td>
+            </tr>
+            <tr>
+                <td class="estado">Piauí</td>
+                <td>3.118.360</td>
+            </tr>
+            <tr>
+                <td class="estado">Distrito Federal</td>
+                <td>2.570.160</td>
+            </tr>
+            <tr>
+                <td class="estado">Mato Grosso do Sul</td>
+                <td>2.449.024</td>
+            </tr>
+            <tr>
+                <td class="estado">Sergipe</td>
+                <td>2.068.017</td>
+            </tr>
+            <tr>
+                <td class="estado">Rondônia</td>
+                <td>1.562.409</td>
+            </tr>
+            <tr>
+                <td class="estado">Tocantins</td>
+                <td>1.383.445</td>
+            </tr>
+            <tr>
+                <td class="estado">Acre</td>
+                <td>733.559</td>
+            </tr>
+            <tr>
+                <td class="estado">Amapá</td>
+                <td>669.526</td>
+            </tr>
+            <tr>
+                <td class="estado">Roraima</td>
+                <td>450.479</td>
+            </tr>
+        </tbody>
+        <tfoot>
+                <th scope="row" style="text-align: left;" >Total de Habitantes</th>
+                <td class="cbc"><strong>210.147.125</strong></td>
+        </tfoot>
+    </table>
+</section>
+</body>
+</html>
