@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html, body {
+    height: 100vw;
+    width: 100vw;
+    background-color: black;
+}
+body {
+    background: url('../image/fundo-madeira.jpg') no-repeat top center fixed;
+    background-size: cover;
+}
+main {
+    position: relative;
+    height: 100vh;
+}
+section#cell {
+    /* Lembrete de posicionamento: O absolute permite ele sempre esta no topo em relação as outras camadas. O top e o left posicionam a quina da imagem no centro. O Transforme conforme abaixo ajuda o nucleo na imagem ao centro! Deve-se usar o conjunto para funcionar a centralização. */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 627px;
+    width: 311px;
+    background: url('../image/frame-iphone.png') no-repeat;
+}
+iframe#tela {
+    position: relative;
+    top: 80px;
+    left: 22px;
+    width: 269px;
+    height: 471px;
+}
+section#social {
+    float: right;
+}
+section#social > a > img {
+    width: 50px;
+    border-radius: 50px;
+    margin: 23px;
+    display: block;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.296);
+    box-sizing: border-box;
+}
+section#social > a > img:hover {
+    border: 2px solid rgba(255, 255, 255, 0.812);
+    transform: translate(-3px, -3px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.296);
+    transition: transform .3s;
+}
