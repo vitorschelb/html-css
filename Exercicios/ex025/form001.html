@@ -13,10 +13,19 @@
 </head>
 <body>
     <h1>My First Form</h1>
-    <form>
-        <p>Nome: <input type="text" name="nome" id="nome"></p>
-        <p>Sobrenome <input type="text" name="sobrenome" id="sobrenome"></p>
+    <form action="cadastro.php" method="POST" autocomplete="off">
+        <p><label for="inome">Nome</label>: <input type="text" name="nome" id="inome"></p>
+        <p><label for="isobrenome">Sobrenome</label> <input type="text" name="sobrenome" id="isobrenome"></p>
         <p><input type="submit" value="Enviar"></p>
+
+        <!--Name é mais util pra HTML e PHP e ID JavaScript e Label-->
+    </form>
+    <h2>Second Form</h2>
+    <form action="cadastro.php" method="get" autocomplete="off">
+        <p><label for="icomida">Comida favorita</label>: <input type="text" name="comida" id="icomida"></p>
+        <p><label for="isobremesa">Sobremesa favorita</label>:<input type="text" name="sobremesa" id="isobremesa"></p>
+        <p><input type="submit" value="Envia Doido"></p>
+
     </form>
 </body>
 </html>
