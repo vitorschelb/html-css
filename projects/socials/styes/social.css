@@ -1,0 +1,25 @@
+@charset "UTF-8";
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        ::-webkit-scrollbar {
+            width: 0px;
+            height: 0px;
+        }
+        img {
+            width: 100vw;
+        }
+        a {
+            background-color: darkred;
+            color: white;
+            padding: 20px;
+            display: block;
+            text-align: center;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+        a:hover {
+            background-color: red;
+        }
