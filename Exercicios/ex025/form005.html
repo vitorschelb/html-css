@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Exemple</title>
+</head>
+<body>
+    <h1>Form Exemple</h1>
+    <form action="cadastros.php" method="get" autocomplete="on">
+        <fieldset>
+            <!-- Quando coloca o mesmo NAME no inputy de RADIO (Não serve pra Checkbox) ele aceita só um CHECK e também muda pro outro-->
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="isxmas" value="M"><label for="isxmas">Masculino</label>
+            <input type="radio" name="sexo" id="isxfem" checked value="F"><label for="isxfem">Feminino</label>
+        </fieldset>
+        <fieldset> <!-- O Label aqui é pra poder marcar clicando na palavra-->
+            <legend>Esportes favoritos</legend>
+            <input type="checkbox" name="esfut" id="iesfut"> <label for="iesfut">Futebol</label>
+            <input type="checkbox" name="esbas" id="iesbas"> <label for="iesbas">Basquete</label>
+            <input type="checkbox" name="esnat" id="iesnat"> <label for="iesnat">Natação</label>
+            <input type="checkbox" name="esten" id="iesten"> <label for="iesten">Tênis</label>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
