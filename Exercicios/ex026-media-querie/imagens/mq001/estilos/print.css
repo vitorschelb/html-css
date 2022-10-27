@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+}
+
+ul {
+    list-style-type: none;
+    
