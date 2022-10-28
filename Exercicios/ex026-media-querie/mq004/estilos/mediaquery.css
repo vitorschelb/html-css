@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+/* Todas as demais Mídias */
+
+/* Typical Device Breakpoints
+
+Pequenas telas: até 600px
+Celular: de 600px até 768px
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Grandes telas: acima de 1200´x
+*/
+
+@media print {
+    body {
+        background-image: url(../images/back-print.jpg); /* DESNESCESSÁRIO*/
+        font-family: 'Courier New', Courier, monospace;
+    }
+    main {
+        border: 2px solid black ;
+    }
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+    main::after {
+        content: "Essa impressão é um teste";
+        text-decoration: overline;
+    }
+    img#cell { display: none;} 
+    img#tablet { display: none;}
+    img#print { display: block;} /* No papel não imprime background !!! */
+    img#desktop { display: none;}
+    img#tv { display: none;}
+
+}
+
+@media screen and (max-width: 600px) {
+
+} /* Telas Pequenas */
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    
+} /* Celular (Aqui não precisa por que ele já tem um CSS pronto, ele é Mobile first */
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    body {
+    background-image: url(../images/back-tablet.jpg);
+    }
+    
+    img#cell { display: none;}
+    img#tablet { display: block;}
+    img#print { display: none;}
+    img#desktop { display: none;}
+    img#tv { display: none;}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    
+    body {
+        background-image: url(../images/back-pc.jpg);
+    }
+
+    img#cell { display: none;} 
+    img#tablet { display: none;}
+    img#print { display: none;} 
+    img#desktop { display: block;}
+    img#tv { display: none;}
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-image: url(../images/back-tv.jpg);
+    }
+    img#cell { display: none;} 
+    img#tablet { display: none;}
+    img#print { display: none;}
+    img#desktop { display: none;}
+    img#tv { display: block;}
+
+}
