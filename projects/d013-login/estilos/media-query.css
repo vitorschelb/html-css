@@ -17,6 +17,7 @@ Grandes: acima de 1200px
     }
     section#login {
         width: 80vw;
+        height: 280px;
     }
     section#login > div#image {
         float: left; /* (Combinado com Display block move as divs) */
@@ -34,6 +35,7 @@ Grandes: acima de 1200px
     }
     section#login {
         width: 950px;
+        height: 350px;
     }
     section#login > div#image {
         float: right;
