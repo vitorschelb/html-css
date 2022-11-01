@@ -7,8 +7,28 @@
     <title>Flex01</title>
     <style>
         /*
-        O DISPLAY da DIV por padrão é BLOCK, o que quer dizer somente ela vai ocupar a linha. Nunca dois elementos vão ocupar a mesma linha.
+        O DISPLAY da DIV por padrão é BLOCK, o que quer dizer somente ela vai ocupar a linha por inteiro. Nunca dois elementos vão ocupar a mesma linha.
         */
+
+        /* 
+        DIREÇÕES FLEX
+
+            ROW - (É o padrão do Flex Direction!)
+            Column - (o MAIN AXIS vira o CROSS AXIS, VERTICAL)
+            Row - Reverse  (HORIZONTAL DIREITA PRA ESQUERDA.)
+            Column - Reverse (VERTICAL BAIXO PRA CIMA)
+
+        FLEX WRAP - DEFINE A QUEBRA DE LINHA DO ELEMENTO FLEX.
+        Se pode executar a quebra OU NÃO.
+        O padrão é no-wrap, sem a quebra.
+        Wrap Reverse - Inverte ambos eixos
+
+        FLEX FLOW - Define o Flex Direction e Flex Wrap em uma linha
+        flex-flow: row nowrap
+        Column e wrap não faz diferença, pq coluna já é quebrada.
+        */
+
+
         body {
             font-family: Arial, Helvetica, sans-serif;
             color: black;
@@ -20,22 +40,34 @@
             text-align: center;
             font-size: 1em;
             color: #fff;
+
         }
         .container {
-            max-width: 500px;
-            margin: auto;
+            max-width: 573px;
+            /*  height: 600px; Se mudar a altura do Container (Parent) o Item (child) vai se flexionar, modelar para ocupar o espaço */
+            margin: auto; /* Para centralizar */
             border: 1px solid #000;
+        
+        }
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap-reverse;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container flex"> <!-- Pode receber duas classes-->
         <div class="item">FlexBox01</div>
         <div class="item">FlexBox02</div>
         <div class="item">FlexBox03</div>
         <div class="item">FlexBox04</div>
         <div class="item">FlexBox05</div>
         <div class="item">FlexBox06</div>
+        <div class="item">FlexBox07</div>
+        <div class="item">FlexBox08</div>
+        <div class="item">FlexBox09</div>
+        <div class="item">FlexBox10</div>
     </div>
 </body>
 </html>
