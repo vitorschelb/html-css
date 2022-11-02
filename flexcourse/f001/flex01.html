@@ -26,6 +26,48 @@
         FLEX FLOW - Define o Flex Direction e Flex Wrap em uma linha
         flex-flow: row nowrap
         Column e wrap não faz diferença, pq coluna já é quebrada.
+        
+       
+
+        JUSTIFY CONTENT - Define o alinhamento dos itens de acordo com o MAIN AXIS, ou seja, o alinhamento principal. Ele acompanha as declarações, SE FOR MODIFICADO ele alinha segundo a modificação! Ou seja, se tiver invertido, o main vai ser a direita, se o cross tiver invertido vai ser bottom!
+
+        FLEX END -> DIREITA
+
+        FLEX START -> ESQUERDA
+
+        SPACE BETWEEN- > Alinha os itens igualmentes, o primeiro elemento alinha pelo flex star e o ultimo pelo flex end, então os outros itens vão ser ditribuidos igualmente.
+
+        SPACE AROUND -> Tambem distribui igualmente, mas NÃO GRUDA igual o Between. 
+        Ele cria um Espacinho de cada lado de cada elemento.
+
+        (ESPAÇO1)ITEM1(ESPAÇO1)(ESPAÇO2)ITEM2(ESPAÇO2)(ESPAÇO3)ITEM3(ESPAÇO#)
+
+        ALIGN ITEMS - Controla o alinhamento pelo Eixo CROSS!
+        Strech é o Padrão, se aumentar a altura o container, ele vai esticar na horizontal, se o item tiver altura declarada, não estica.
+
+        FLEX START -  PERDE O ALONGAMENTO E VAI PRO INICIO DO CROSS (TOP)
+        FLEX EN - PERDE O ALONGAMENTO E VAI PRO FINAL DO CROSS (BOT)
+
+        ALIGN CONTENT - Alinha NO CROSS AXIS
+        ALIGN CONTENT CENTER DIFERENTE DO ITEMS, ELE NAO TEM ESPAÇAMENTO.
+
+        FLEX DE ITEMS
+
+        FLEX GROW - O conteúdo dentro do child é completado. A box child redimensiona. 
+
+        FLEX BASIS - Indiferente, ele deixa todos no mesmo valor. Podendo alterar divs individuais sem alterar os outros.
+
+        Order - Muda a ORDEM dos elementos dentro do container. É aplicado diretamente no item. Geralmente é aplicado INLINE.
+        
+        Shrink - Define a capacidade de um elemento reduzir, se redimensionar para caber dentro de um container. O padrão é 1.
+
+        Propriedade Flex: É um atalho para as propriedades, flex-grow, flex chrins e flex-basis. Quando se define FLEX se define essas três propriedades.
+        Grow Padrão: n
+        Shrink Padrão: 1
+        Basis Padrão: 0 
+
+        ALIGN SELF. Alinha elementos especificos
+
         */
 
 
@@ -36,38 +78,33 @@
         .item {
             margin: 5px;
             padding: 5px;
+            width: 200px;
             background: #447;
             text-align: center;
             font-size: 1em;
             color: #fff;
+            }
 
-        }
         .container {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
             max-width: 573px;
+            height: 400px;
             /*  height: 600px; Se mudar a altura do Container (Parent) o Item (child) vai se flexionar, modelar para ocupar o espaço */
             margin: auto; /* Para centralizar */
             border: 1px solid #000;
-        
         }
 
-        .flex {
-            display: flex;
-            flex-wrap: wrap-reverse;
-        }
     </style>
 </head>
 <body>
-    <div class="container flex"> <!-- Pode receber duas classes-->
+    <div class="container"> <!-- Pode receber duas ou mais classes-->
         <div class="item">FlexBox01</div>
         <div class="item">FlexBox02</div>
         <div class="item">FlexBox03</div>
         <div class="item">FlexBox04</div>
-        <div class="item">FlexBox05</div>
-        <div class="item">FlexBox06</div>
-        <div class="item">FlexBox07</div>
-        <div class="item">FlexBox08</div>
-        <div class="item">FlexBox09</div>
-        <div class="item">FlexBox10</div>
     </div>
 </body>
 </html>

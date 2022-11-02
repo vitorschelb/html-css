@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+:root {
+    --ff-standard: 'passion', Verdana, Helvetica, sans-serif;
+    --clr-primary: #ee6352;
+    --clr-body: #333;
+    --clr-bg: #ddd;
+    --spacer: 1rem;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+h1, p {
+    margin: 0;
+}
+
+body {
+    background-color: var(--clr-bg);
+    color: var(--clr-body);
+    font-family: var(--ff-standard);
+    min-height: 100vh;
+    font-size: 1.125em;
+    line-height: 1.6em;
+    
+}
+
+.content-flow {
+    width: 70vw;
+    margin: 3rem auto;
+    padding: 3em;
+    background-color: white;
+    box-shadow: 3px 4px 3px 1px rgba(0, 0, 0, 0.248);
+}
+
+.title {
+    color: #ee6352;
+    text-align: center;
+    padding-bottom: .5em;
+}
+
+.even-columns {
+    display: flex;
+}
+
+.even-columns > * {
+    flex-basis: 100%;
+}
+
+.column {
+    padding: 3em;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+.grid-ish {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-ish > * {
+    flex: 1 1 10em; /* A porcentagem vai buscar ficar 33% no layout de 3 em cima e 2 embaixo, com o EM ele vai buscar ter X EM setado, então vai se auto ajustar */
+}
+
+.content-sidebar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content-sidebar > * {
+    flex: 1 1 10em;
+}
+
+.content-sidebar >:nth-child(1) {
+    flex: 1 1 70%;
+    min-width: 25ch; /* Impede de ficar menor que o tamanho de 25 caracteres */
+}
+
+.content-sidebar >:nth-child(2) {
+    flex: 1 1 30%;
+    min-width: 15ch;
+}
