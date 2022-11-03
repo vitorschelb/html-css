@@ -1,0 +1,400 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap');
+
+:root {
+    --ft-standard: 'Nunito', arial, sans-serif;
+}
+
+* {
+    margin: 0px;
+    box-sizing: border-box; 
+    /* 
+    EXEMPLO
+    p {
+        width: 300px;
+        padding: 0 60px;
+    }
+    O que acontece? A box sizing faz a soma de padding e border respeitar o width de 300px. Ou seja, o conteúdo se ajusta para o paddin, ele encolhe. Do contrário, seria somado 360px. É uma boa prática que é muito utilizada.
+    */ 
+}
+
+body h1, h2, p, ul, li a {
+    margin: 0px;
+    padding: 0px; /* Tentar com * depois de pronto pra ver se faz diferença */
+}
+
+body {
+    font-family: var(--ft-standard);
+    color: #222222;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%; /*100% pq ela ajusta 100% da DIV, do VW seria da screen, testar depois pra ver o que rola */
+}
+
+.superinfo-bg {
+    background-color: #122ab2;
+    color: white;
+}
+
+.superinfo {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content:space-between; /*Lembrar que o space-between é mais usado que o around */
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+
+.superinfo p, .superinfo a { /* Boa prática, sempre especificar os itens com boa semântica, mesmo que o geral fosse funcionar. */
+    margin: 0 10px 10px 10px;
+}
+
+.superinfo a {
+    color: white;
+}
+
+.menu-bg {
+    background-color: #2c70ff;
+}
+
+.menu {
+    max-width: 960px;
+    margin: 0 auto; /* verificar se o 0 é realmente necessário */
+    padding: 15px 0;
+    display: flex; /* Se atentar que as child (item) são o FLEXBLOG e o NAV, não os itens individuais da lista */
+    flex-wrap: wrap;
+    justify-content: space-between; /*main axis */
+    align-items: center; /*cross axis - Alinhando sempre no pivot */
+}
+
+.menu a {
+    color: white;
+}
+
+.menu-logo a {
+    font-size: 2.25em; /* 36/16 */
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.menu-nav ul { /* aqui criei um flex dentro do outro flex, como se fosse o neto do parent e o child do child(nav)*/
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu-nav a {
+    font-size: 1.25em;
+    display: block;
+    padding: 10px; /* no menu é importante deixar a area de click maior para evitar miss click e melhor a navegação */
+}
+
+.menu-nav a:hover {
+   color: #122ab2;
+}
+
+.intro {
+    font-size: 3em; /*Pesquisar melhor dessas diviões por 16 */
+    line-height: 1;
+    max-width: 960px; /*pra alinhar com o resto da pagina */
+    margin: 0 auto;
+    padding: 60px 10px; /*Pra alinhar com o header que ja tem declarado padding*/
+}
+
+.sobre {
+    border-top: 2px solid #2c70ff;
+    border-bottom: #2c70ff;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sobreinfo {
+     flex: 2 1 300px; /* Ele faz flex 2 pro grow, flex 1 pro shrink, flex 0 pro basis. O BASIS AQUI É PRA IMAGEM QUEBRAR ANTES DE FICAR MINUSCLA, E TIPO UM MIN WIDTH */
+    margin: 0 10px;
+}
+
+.sobreinfo h1 {
+    font-size: 3em;
+    margin-bottom: .5em;
+}
+
+.sobreinfo p {
+    font-size: 1.25em;
+    line-height: 1.4;
+    margin-bottom: 1em; /*Ele usa EM pra poder ajustar em FLEX, pq ta DENTRO da div */
+    color: #7c7c7c;
+}
+
+.sobreimg {
+    flex: 1 1 160px; /*O BASIS DE 160 É O MINIMO QUE REDUZ ANTES DE QUEBRAR */
+    margin: 0 10px;
+}
+
+.produtos {
+    max-width: 960px;
+    margin: 60px auto;
+}
+
+.produtos h1 {
+    font-size: 3em;
+    margin: 0 10px 60px 10px; /*Segue o padrão de espaçamento de 60 em cima e embaixo, a pagina deve ser consistente em suas declarações, o 10 é pra compensar aquele 10 do padding do anterior*/
+}
+
+.produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.produtos-item {
+    flex: 1 1 175px;
+    margin: 10px;
+}
+
+.produtos-item h2 {
+    padding: 60px 20px; /* segue respeitando o padrão de 60px*/
+    font-size: 3em;
+    color: #a4a4a4;
+    background-color: #f7f7f7;
+}
+
+.purple /* Aqui como deu espaço na declaração da classe é como se tivesse 2 classes, a padrão em comum e a individual */ {
+    border-top: 8px solid #ae81ff;
+}
+
+.pink {
+    border-top: 8px solid #f9265e;
+}
+
+.blue {
+    border-top: 8px solid #66d9eb;
+}
+
+.preco {
+    background-color: #f7f7f7;
+    padding: 60px 60px;
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: flex-end; /* Quando você declara o item pra ir pra base do cross axis o conteudo como é flex ajusta o tamanho e da o efeito cascatinha */
+}
+
+.preco-item {
+    flex: 1;
+    border: 4px solid white;
+    padding: 20px;
+    margin: 10px;
+    min-width: 260px; /*DE NOVO, O BASIS BUGA NO SAFARI, DEFINIR SEMPRE ESSA MEDIA DE MIN WIDTH PRA NAO QUEBRAR NO SAFARI, 260 pq é o menor dos celulares não quebraveis. Pode usar o Flex Basis tambem como no primeiro*/
+}
+
+.preco-item h2 {
+    font-size: 3em;
+    color: #a4a4a4;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.preco-item span {
+    max-width: 300px;
+    margin: 20px auto;
+    display: block; /*O SPAN por padrão é inline*/
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0 5px 0;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+    font-size: 3em;
+}
+
+.preco-item sup {
+    font-size: 1.5rem; /* ATENÇÃO : O REM AQUI É UTILIZADO POR QUE COMO O SUP TA DENTRO DE SPAN, 1EM = 3EM, PQ ELE É RELATIVO A DIV PAI. LEMBRA QUE SEMPRE MULTIPLICA IGUAL A TABELINHA?
+    O REM É RELATIVO A RAIZ, O ROOT, OU SEJA 16PIXEL! */
+}
+
+.preco-item ul {
+    max-width: 300px; /*o mesmo do pai */
+    margin: 20px auto; /* o mesmo do pai*/
+    font-size: 1.25em;
+    line-height: 2;
+    font-style: italic;
+    color: #7c7c7c;
+}
+
+.preco-item li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Cria-se um PSEUDO ELEMENTO DECLARADO FLEX DA DIV PAI, LI VIRA DIV PAI E O PSEUDO ELEMENTE DIV FILHA, A BOLINHA É SÓ UM BACKGROUND AZUL REDONDO!!! */
+.preco-item li::after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: #2c70ff;
+    border-radius: 50%;
+}
+
+.preco-item a {
+    max-width: 300px;
+    display: block;
+    margin: 20px auto;
+    border: 4px solid;
+    color: #222222;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.25em; /* Aqui é legal pq mostra como o flex sempre busca adaptar a dimensão do objeto, ele só vai quebrar quando atingir o limite do font-size agora. Ele respeita o font-size!*/
+    padding: 15px 0;
+    text-align: center;
+}
+
+@media (max-width:800px) {
+    .preco {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .preco .preco-item:nth-child(3) {
+        order: -2;
+    }
+    .preco .preco-item:nth-child(2) {
+        order: -1;
+    }
+} /*Remove o excesso de padding para melhor a navegação em mobile e tablet, TAMBEM MUDA A EXIBIÇÃO DOS PLANOS PRA TELAS DE CELULARES, A IDEIA É O MAIS CARO APARECER PRIMEIRO. */
+
+.qualidade {
+    max-width: 960px;
+    margin: 60px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.qualidade-item {
+    flex: 1 1 300px; /* Lembrando que o basis alem de deixar responsivo no mac, é o minimo que ele vai diminuir e a base do grow, o ajuste nao fica unicamente no conteudo escrito, no ie11 calc nao funciona! */
+    margin: 20px 10px;
+}
+
+.qualidade-item h2 {
+    font-size: 2.25em;
+    color: #a4a4a4;
+    margin-bottom: 20px;
+}
+
+.qualidade-item h2::before { /*Aqui se cria exatamente a mesma coisa da bolinha */
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 30px;
+    margin-right: 10px;
+    background-color: blue;
+}
+
+.qualidade-item:nth-of-type(3n+1) h2::before {
+    background: #ae81ff;
+} /* Esse modo, em vez de selecionar o filho, nth-child, se seleciona pelo tipo. O tipo declarado entre parenteses, seria - conta-se 3 elementos, a partir do primeiro, e se repete. Todos os tipo que seguem a ordem então, adquirem a caracteristica. É semelhante ao que guanabara usou pra estilizar as tabelas, em uma padrão no tipo especifico declarado*/
+
+.qualidade-item:nth-of-type(3n+2) h2::before {
+    background: #f9265e;
+}
+
+.qualidade-item:nth-of-type(3n+3) h2::before {
+    background: #66d9eb;
+}
+
+.qualidade-item p {
+    font-size: 1.25em;
+    line-height: 1.4;
+    color: #7c7c7c;
+}
+
+.newsletter {
+    background-color: #f7f7f7;
+    padding: 60px calc((100% - 960px) /2); /*Ele mantem alinhado com esse calc, mas não entendi bem como se calculou */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.newsletter-info {
+    flex: 1 1 260px;
+    margin: 0 10px;
+}
+
+.newsletter-info h1 {
+    font-size: 3em;
+    color: #a4a4a4;
+}
+
+.newsletter p {
+    font-size: 1.25em;
+    font-style: italic;
+    max-width: 200px;
+    color: #7c7c7c;
+    margin-bottom: 10px;
+}
+
+.newsletter-form {
+    flex: 2 1 260px; /*Não entendi direito o 2 e o 1 do grow aqui, ele pega o espaço de 2 colunas eu acho*/
+    margin: 0 10px;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap; /*Aqui faz dentro do formulario o button e o input se alinharem*/
+}
+
+.newsletter-form input {
+    flex: 3 1 200px; /*não vi diferença entre 1 2 e 3 */
+    font-size: 1.25em;
+    color: #7c7c7c;
+    font-style: italic;
+    font-family: var(--ft-standard); /*dentro do input nao pega a font declarada*/
+    border: 4px solid #2c70ff;
+    background: transparent; /*pra não aparecer */
+    padding: 15px 10px;
+    margin: 0px; /*pq alguns navegadores leem input com margem. LEMBRAR DISSO */
+    border-radius: 0px; /*Pq no safari arredonda o input por padrão!*/
+}
+
+.newsletter-form button {
+    flex: 1 1 260px; /* Aqui de novo, ele ocupa 2 e 3 relativo a qual espaço? Por que a diferença nao é relativo ao 2 do INPUT!*/
+    font-family: var(--ft-standard);
+    font-size: 2.25em;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #2c70ff;
+    color: white;
+    margin: 0px;
+    cursor: pointer;
+    border: 0px;
+    padding: 15px 10px /*eles ajustam junto pq são dois flex filho de um pai só, pra equilibrar um o outro tbm adapta*/;
+}
+
+@media (max-width: 600px) {
+    .newsletter-form button {
+    font-size: 1.5em;
+    }
+}
+
+footer {
+    background-color: #2c70ff;
+    display: flex;
+    height: 200px; /*Ele fica fixo */
+    align-items: center;
+}
+
+footer p {
+    flex: 1;
+    text-align: center;
+    font-size: 2.25em;
+    color: #122ab2;
+}
