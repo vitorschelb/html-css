@@ -1,149 +1,152 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,800&display=swap");
 
 :root {
-    --ff-standard: 'Poppins', 'Verdana', sans-serif;
+  --ff-standard: "Poppins", "Verdana", sans-serif;
 }
 /* Base Styling - Nesse modelo de projeto, é feito o Base Styling primeiro.*/
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 62.5%; /* Aqui é padronizado para 1*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%; /* Aqui é padronizado para 1*/
 }
 
 body {
-    font-family: var(--ff-standard);
+  font-family: var(--ff-standard);
 }
 
 a {
-    text-decoration: none;
-    font-weight: 400; /*normal*/
-    font-size: 1.6rem; /* 1.6*10 = 16px (O REM é utilizado pq a RAIZ * 62.5% é a referencia */
-    color: whitesmoke;
+  text-decoration: none;
+  font-weight: 400; /*normal*/
+  font-size: 1.6rem; /* 1.6*10 = 16px (O REM é utilizado pq a RAIZ * 62.5% é a referencia */
+  color: whitesmoke;
 }
 
-h1, h2, p {
-    margin: 1.6rem 0; /* conferir esse modo de fazer margin */
+h1,
+h2,
+p {
+  margin: 1.6rem 0; 
 }
 
 h1 {
-    font-size: 800; /*bold*/
-    font-size: 3.6rem;
-    
+  font-size: 800;
+  font-size: 3.6rem;
 }
 
 h2 {
-    font-weight: 800;
-    font-size: 2.4rem;
+  font-weight: 800;
+  font-size: 2.4rem;
 }
 
 p {
-    font-weight: 400;
-    font-size: 1.8rem;
+  font-weight: 400;
+  font-size: 1.8rem;
 }
 
 img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .row {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    align-items: center;
-    margin: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  align-items: center;
+  margin: auto;
 }
 
 section {
-    padding: 100px 0;
+  padding: 100px 0;
 }
 
 /* Hero Section */
 
 header {
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url(../img/bg.jpg) no-repeat center; /*O linear gradient da um efeito escuro de transparência na imagem, o primeiro é de cima pra baixo e o segundo é de baixo pra cima a transparencia, não precisa declarar a direção */
-    background-size: cover;
-    color: whitesmoke
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+    url(../img/bg.jpg) no-repeat center; /*O linear gradient da um efeito escuro de transparência na imagem, o primeiro é de cima pra baixo e o segundo é de baixo pra cima a transparencia, não precisa declarar a direção */
+  background-size: cover;
+  color: whitesmoke;
 }
 
 .logo h1 {
-    font-size: 3.2rem;
-    color: #4CAF50;
-    margin: 0; /*Por algum motivo ainda existe uma margem em cima, isso tira */
+  font-size: 3.2rem;
+  color: #4caf50;
+  margin: 0; /*Por algum motivo ainda existe uma margem em cima, isso tira */
 }
 
 nav {
-    padding: 2% 8%; /*Conferir qual é a unidade de medida ideal, eu gostei mais do modelo do outro cara */
-    display: flex;
-    justify-content: space-between;
+  padding: 2% 8%; /*Conferir qual é a unidade de medida ideal, eu gostei mais do modelo do outro cara */
+  display: flex;
+  justify-content: space-between;
 }
 
 #burguer {
-    display: none;
+  display: none;
 }
 
 @media screen and (max-width: 768px) {
-    
-    #burguer {
-        display: block;
-        position: absolute;
-        top: 18px;
-        right: 32px;
-        padding: 10px;
-        cursor: pointer;
-    }
+  #burguer {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 32px;
+    padding: 10px;
+    cursor: pointer;
+  }
 
-    #menu {
-        display: block; /*Aqui ele usa o display:block, não sei pq não funcionou, mas o column rolou. Tava ao contrario. 
+  #menu {
+    display: block; /*Aqui ele usa o display:block, não sei pq não funcionou, mas o column rolou. Tava ao contrario. 
         Update: Descobri o problema, o projeto original fora do media query usava inline-block, de alguma forma brigava com ele e não aceitava os elementos em block. O flex estava funcionando muito bem, mas ao adicionar a animação, no final dela os elementos voltavam INLINE, tentei dar overflow no eixo X, ja que era o eixo X que aparecia, mas não funcionou, acho que o inline ainda sobrescreve a alteração. Dessa forma, quando fui investigar melhor vi o inline block, ao alterar o alinhamento no eixo x no final da animação sumiu. Então retirei o display flex do active e o colum substitui pelo block. Funcionou perfeitamente.*/
-        position: absolute;
-        width: 100%;
-        top: 70px;
-        right: 0px;
-        background: #36342e;
-        height: 0; /*foi colocado 0, para dar a animação de 0, vai do 0 até o calc */
-        z-index: 1000; /* Garante que se tiver elementos abaixo dele, ele vai ficar por cima */
-        transition: .6s;
-        visibility: hidden; /* O display none, não estava funcionando com essa forma de animação, achei ela muito mais trabalhosa, rever a forma de animação do guanabara */
-        overflow-y: hidden; /*Utilizado pq no final da animação estava aparecendo o menu, é como se fosse a "sobra"(overflow) da animação, omo se não fosse na dimensão do espaço, mas na do tempo da animação.*/
-    }
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0px;
+    background: #36342e;
+    height: 0; /*foi colocado 0, para dar a animação de 0, vai do 0 até o calc */
+    z-index: 1000; /* Garante que se tiver elementos abaixo dele, ele vai ficar por cima */
+    transition: 0.6s;
+    visibility: hidden; /* O display none, não estava funcionando com essa forma de animação, achei ela muito mais trabalhosa, rever a forma de animação do guanabara */
+    overflow-y: hidden; /*Utilizado pq no final da animação estava aparecendo o menu, é como se fosse a "sobra"(overflow) da animação, omo se não fosse na dimensão do espaço, mas na do tempo da animação.*/
+  }
 
-    #nav.active #menu {
+  #nav.active #menu {
+    height: calc(
+      100vh - 70px
+    ); /*-70 pra tirar a sobra, pq se nao ele fica com 100vh MAIS o posicionamento no topo de 70px */
+    visibility: visible;
+    /* overflow-y: auto; /*para caso o cliente adicione mais itens, não esconda, crie a barra */
+  }
 
-        height: calc(100vh - 70px); /*-70 pra tirar a sobra, pq se nao ele fica com 100vh MAIS o posicionamento no topo de 70px */
-        visibility: visible;
-        overflow-y: auto; /*para caso o cliente adicione mais itens, não esconda, crie a barra */
+  #menu li /* Aqui o origami usa A, mas não pegou, o LI funcioniou! */ {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid #4caf4f47;
+  }
 
-    }
-
-    #menu li /* Aqui o origami usa A, mas não pegou, o LI funcioniou! */{
-        padding: 1rem 0;
-        margin: 0 1rem;
-        border-bottom: 2px solid #4caf4f47;
-    }
-    
-    #nav.active #burguer {
-        background: blue;
-    }
+  #nav.active #burguer {
+    background: blue;
+  }
 }
 
 nav ul {
-    list-style-type: none;
-    display: flex; /* Mudei pra flex pra alinha */
+  list-style-type: none;
+  display: flex; /* Mudei pra flex pra alinha */
 }
 
 nav ul li {
-    display: block; /*Aqui eu preferiria usar igual o Origami, criaria um FLEX na UL, ficaria mais responsivo! Ele também usa poucas classes, eu gostei de usar muitas classes igual o origami, mas a forma de organização da CSS desse aqui é melhor. Achei a forma como ele usa unidade de medida font-size também melhor, mas a unidade de % do padding pior, é menos visivel.*/
-    margin-left: 2.5rem; /*Espaçamento entre os itens da lista*/
+  display: block; /*Aqui eu preferiria usar igual o Origami, criaria um FLEX na UL, ficaria mais responsivo! Ele também usa poucas classes, eu gostei de usar muitas classes igual o origami, mas a forma de organização da CSS desse aqui é melhor. Achei a forma como ele usa unidade de medida font-size também melhor, mas a unidade de % do padding pior, é menos visivel.*/
+  margin-left: 2.5rem; /*Espaçamento entre os itens da lista*/
 }
 
 nav ul li a:hover {
-    color: #4CAF50;
-    transition: .5s ease-in-out;
+  color: #4caf50;
+  transition: 0.5s ease-in-out;
 }
 
-
+nav {
+  background-color: black;
+}
