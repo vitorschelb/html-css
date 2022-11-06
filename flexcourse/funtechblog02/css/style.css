@@ -10,10 +10,14 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: var(--ff-standard);
+
 }
 
 body {
-    font-family: var(--ff-standard);
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url('../img/bg.jpg') no-repeat center;
+    background-size: cover;
+    height: 100vh;
 }
 
 a {
@@ -27,16 +31,220 @@ a:hover {
    transition: .3s ease-in-out;
 }
 
-.logo h1 {
+#logo {
     font-size: 3.2rem;
     color: #4CAF50;
+    font-weight: bold;
 }
 
 #header {
+    height: 70px;
     display: flex;
+    align-items: center;
+    padding: 6.5rem;
+    justify-content: space-between;
 }
 
 #menu {
     display: flex;
     list-style: none;
+    gap: .5rem;
 }
+
+#menu a {
+    display: block;
+    padding: .5rem;
+    color: white;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 0px;
+        top: 70px;
+        right: 0px;
+        z-index: 1000;
+        transition: .6s;
+        visibility: hidden;
+        overflow-y: hidden;
+        background-color: #3e3e3f;
+    }
+    
+    #nav.active #menu {
+        height: calc(100vh - 70px);
+        visibility: visible;
+    }
+
+    #menu li {
+       padding: 1rem 0;
+       margin: 0 1rem;
+       border-bottom: 2px solid #4caf4f47;
+    }
+
+     #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+        border: none;
+    }
+
+    #hamburguer {
+        border-top: 2px solid;
+        border-width: medium;
+        width: 20px;
+        color: white;
+        
+    }
+    
+    #hamburguer::after, #hamburguer::before  {
+        content: '';
+        display: block;
+        width: 20px;
+        height: .5px;
+        border-top: 2px solid;
+        margin-top: 4px;
+        border-width: medium;
+        transition: .3s;
+        position: relative;
+    }
+
+    #nav.active #hamburguer {
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
+
+.hcontent {
+    display: flex;
+    color: white;
+    font-size: 2.4rem;
+    flex-direction: column;
+    padding: 6.5rem;
+}
+
+.hcontent h1 {
+    padding-bottom: 4rem;
+    margin: 8rem 0 0 0;
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.hcontent p {
+    padding-bottom: 2rem;
+    font-size: 1.6rem;
+    text-justify: auto;
+}
+
+.hcontent form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    font-size: 1.3rem;
+    padding: 15px 0 15px;
+    width: 25%;
+    margin: .5rem 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-variant: small-caps;
+    text-indent: 15px;
+    color: #ccc;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 6px 0 6px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+    .hcontent form {
+        width: 150vh;
+    }
+}
+
+.sobre {
+    display: flex;
+    padding: 6.5rem;
+    background-color: white;
+    justify-content: space-between;
+    font-weight: bold;
+    
+}
+
+.sobre a {
+    background-color: #4CAF50;
+    color: white;
+    padding: .5rem;
+    font-size: 1.2rem;
+    font-weight: normal;
+    border-radius: 4px;
+    display: inline-block;
+    text-transform: uppercase;
+
+}
+
+.sobre1 {
+    
+    
+}
+/*Descobrir como faz parar de crescer pro lado */
+.sobre2 {
+    
+}
+
+.sobre2  h2 {
+    font-size: 1.6rem;
+    text-align: justify;
+    margin: 0 3rem 1rem;
+}
+
+.sobre3  h2 {
+    font-size: 1.6rem;
+    text-align: justify;
+    margin: 0 3rem 1rem;
+}
+
+.sobre1  h2 {
+    font-size: 1.6rem;
+    text-align: justify;
+    margin-bottom: 3rem;
+}
+
+.sobre p {
+    margin: 1rem 3rem 1rem;
+    font-size: 1rem;
+    max-width: 200px;
+}
+
+.btn {
+    margin: 1rem 3rem 1rem;
+}
+
+.sobre1 img {
+    width: 200px;
+}
+
