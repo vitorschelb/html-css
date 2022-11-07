@@ -237,21 +237,17 @@ input[type=submit] {
     margin: 0 3rem 1rem;
 }
 
-.row {
+.about2 .row {
     display: flex;
     justify-content: space-between;
     width: 80%;
     align-items: center;
     margin: auto;
-    
-    
 }
 
 .about2 {
     background-color: #222;
     color: whitesmoke;
-    
-
 }
 
 .about2 .card {
@@ -260,13 +256,10 @@ input[type=submit] {
     background-color: #DCDCDC;
     margin: 1.6rem;
     text-align: center;
-
 }
 
 .about2-left {
-    flex-basis: 50%;
-    
-    
+    flex-basis: 50%;    
 }
 
 .about2-right {
@@ -292,4 +285,186 @@ input[type=submit] {
 
 .material-symbols-outlined {
     color: #369039;
+    
+}
+
+/* Progress */
+
+.process {
+    background-color: white; /*Depois fazer um linear gradient*/
+    padding: 6.5rem;
+}
+
+.process .row {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    align-items: center;
+    margin: auto;
+}
+
+.process h1 {
+    font-size: 3.6rem;
+}
+
+.process h2 {
+    font-size: 2.4rem;
+    color: #4CAF50;
+}
+
+.process p {
+    font-size: 1.4rem;
+}
+
+.boxes {
+    display: flex;
+    padding: 1.8rem;
+}
+
+.box1, .box2, .box3 {
+    padding: 1.8rem;
+}
+
+.box1 {
+    text-align: left;
+}
+
+.box2 {
+    text-align: center;
+}
+
+.box3 {
+    text-align: right;
+}
+
+.progress-bar {
+    width: 80%;
+    height: 2px;
+    background-color: #222;
+    margin: auto;
+    position: relative;
+    margin-top: 5.8rem;
+}
+
+.c1, .c2, .c3 {
+    background-color: #222;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+}
+
+.c1 {
+    top: -8px;
+    left: 50px;
+}
+
+.c2 {
+    top: -8px;
+    left: 50%;
+}
+
+.c3 {
+    top: -8px;
+    right: 50px;
+}
+
+/* Avaliations */
+
+.av img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+.avaliation .av {
+    padding: 2rem 6rem;
+    margin: 0 8rem 0;
+    background-color: #464646c8;
+}
+
+.avparent {
+    display: flex;
+    justify-content: center;
+}
+
+.avaliation .row {
+    display: flex;
+    justify-content: center;
+    padding: 6.5rem 0;
+    background-color: black;
+
+}
+
+.avaliation .imgface {
+    height: 80px;
+    width: 80px;
+    
+}
+
+.av p {
+    max-width: 300px;
+    font-size: 1.2rem;
+    color: white;
+    margin: 5px;
+}
+
+.av h2 {
+    font-size: 1.8rem;
+    color: white;
+    margin: calc(15px - 5px) 0;   
+}
+
+/* Contact */
+
+.contact {
+    padding: 4.5rem 0;
+    background-color: white;
+}
+
+.title {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.dataform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cont {
+    font-size: .8rem;
+    padding: 7px 0 7px;
+    width: 25%;
+    margin: 1rem 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-variant: small-caps;
+    color: #ccc;
+}
+
+#message {
+    height: 100px;
+    width: 25%;
+    margin: .5rem 1rem 1rem;
+    padding: 7px 0 7px;
+    font-size: .8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-variant: small-caps;
+    text-indent: 15px;
+}
+
+footer {
+    height: 80px;
+    background-color: #222;
+    color: #fff;
+    line-height: 80px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 2rem;
 }
