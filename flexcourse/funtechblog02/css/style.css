@@ -15,7 +15,9 @@
 }
 
 body {
-    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url('../img/bg.jpg') no-repeat center;
+    background: url('../img/bg.jpg') no-repeat center;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.638);
     background-size: cover;
     height: 100vh;
 }
@@ -26,7 +28,7 @@ a {
     font-size: 1.6rem;
 }
 
-a:hover {
+#menu a:hover {
    color: #4CAF50;
    transition: .3s ease-in-out;
 }
@@ -142,7 +144,7 @@ a:hover {
 
 .hcontent h1 {
     padding-bottom: 4rem;
-    margin: 8rem 0 0 0;
+    margin: 4rem 0 0 0;
     font-size: 2.4rem;
     font-weight: bold;
 }
@@ -195,6 +197,14 @@ input[type=submit] {
     
 }
 
+.sobre h2 {
+    font-size: 2rem;
+    text-align: justify;
+    margin-bottom: 3rem;
+    max-width: 300px;
+    margin: 0 3rem 1rem;
+}
+
 .sobre a {
     background-color: #4CAF50;
     color: white;
@@ -207,44 +217,79 @@ input[type=submit] {
 
 }
 
-.sobre1 {
-    
-    
-}
-/*Descobrir como faz parar de crescer pro lado */
-.sobre2 {
-    
-}
-
-.sobre2  h2 {
-    font-size: 1.6rem;
-    text-align: justify;
-    margin: 0 3rem 1rem;
-}
-
-.sobre3  h2 {
-    font-size: 1.6rem;
-    text-align: justify;
-    margin: 0 3rem 1rem;
-}
-
-.sobre1  h2 {
-    font-size: 1.6rem;
-    text-align: justify;
-    margin-bottom: 3rem;
-}
-
 .sobre p {
     margin: 1rem 3rem 1rem;
-    font-size: 1rem;
-    max-width: 200px;
+    font-size: 1.2rem;
+    max-width: 300px;
+    text-align: justify;
 }
 
 .btn {
     margin: 1rem 3rem 1rem;
 }
 
+.sobre1 {
+    display: flex;
+    flex-direction: column;
+}
 .sobre1 img {
-    width: 200px;
+    width: 300px;
+    margin: 0 3rem 1rem;
 }
 
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+    margin: auto;
+    
+    
+}
+
+.about2 {
+    background-color: #222;
+    color: whitesmoke;
+    
+
+}
+
+.about2 .card {
+    padding: 3rem 8rem;
+    color: #222;
+    background-color: #DCDCDC;
+    margin: 1.6rem;
+    text-align: center;
+
+}
+
+.about2-left {
+    flex-basis: 50%;
+    
+    
+}
+
+.about2-right {
+    flex-basis: 30%;
+    margin-top: 6rem;
+}
+
+.about2 h1 {
+    font-size: 3.6rem;
+    color: #4CAF50;
+}
+
+.about2 h2 {
+    font-size: 2.4rem;
+    margin: 1rem 0;
+    line-height: 24px;
+}
+
+.about2 p {
+    font-size: 1.4rem;
+    margin-top: 1.2rem;
+}
+
+.material-symbols-outlined {
+    color: #369039;
+}
