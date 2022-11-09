@@ -15,6 +15,10 @@
     --c-5: #0D0D0D;
 }
 
+html {
+    width: 100vw;
+}
+
 body {
     background-color: whitesmoke;
 }
@@ -36,6 +40,7 @@ h2 {
 p, li {
     font-size: 1rem;
 }
+
 
 /* img {
    width: 200px;
@@ -86,7 +91,7 @@ header .btn {
     background-color: var(--c-3);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
     .menu {
         display: flex;
         flex-direction: column;
@@ -124,28 +129,31 @@ header .btn {
         margin-bottom: 20px;
     }
 
-    .fsbox {
-        display: flex;
-        
-    }
+    .fourth-section p {
+        max-width: 300px;
+        margin-bottom: 50px;
+   }
 
-    .imgparent {
-        display: flex;
-        flex-wrap: wrap;
-    }
-}
+   .fifth-section p {
+        max-width: 300px;
+        text-align: center;
+        margin: 40px 0;
+   }
 
-@media (max-width: 389px) {
-    .fsbox img {
-        width: 100px;
-        height: 60;
-    }
-}
+   .botao p {
+    right: -30px;
+   }
 
-@media (max-width: 590px) and (min-width: 400px)
-{
-    
-}
+   .info2 {
+    margin: 0;
+   }
+
+   .worker img {
+    width: 250px;
+   }
+
+
+   }
 
 
 .first-section {
@@ -184,10 +192,6 @@ header .btn {
     color: white;
     margin-top: 10px;
 }
-
-/* .fs-div-about {
-    /* margin-right: 100px; */
-
 
 .form {
     background-color: white;
@@ -280,7 +284,7 @@ input, textarea {
 
 .tsparent {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     background-color: white;
     flex-wrap: wrap;
     margin-top: 50px;
@@ -309,8 +313,12 @@ input, textarea {
     margin-right: 4px; 
 }
 
+.tsbox1 {
+    margin: 20px 50px;
+}
+
 .tsbox2 {
-    margin-top: 20px;
+    margin: 20px 50px;
     display: flex;
     flex-direction: column;
     width: 300px;
@@ -335,13 +343,17 @@ input, textarea {
 }
 
 .botao {
-    background-color: lightgrey;
+    background: lightgray no-repeat center;
+    background-size: cover;
+    position: relative;
     display: flex;
     flex-direction: column;
     border-radius: 0 0 10px 10px;
+    
+    
 }
 
-.tsbox2 button {
+.button {
     align-self: flex-end;
     font-size: 1rem;
     font-weight: bold;
@@ -354,7 +366,11 @@ input, textarea {
     box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.138);
     cursor: pointer;
     margin-bottom: 10px;
-    margin-right: 10px;
+    
+}
+
+.button:hover {
+    background-color: #467302;
 }
 
 .botao p {
@@ -363,11 +379,12 @@ input, textarea {
     font-weight: bold;
     color: rgb(128, 128, 128);
     position: relative;
-    text-align: end;
-    right: -75px;
+    text-align: start;
+    right: -10px;
     bottom: -5px;
     font-style: italic;
 }
+
 
 /* FOURTH SECTION */
 
@@ -381,24 +398,106 @@ input, textarea {
 
 .fourth-section p {
     text-align: center;
+    width: 500px;
 }
 
 .imgparent {
     display: flex;
     justify-content: center;
     margin: auto;
+    flex-wrap: wrap;
 }
 
 .fsbox {
-    flex: 1 2 175px;
+    flex: 1 1 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 250px;
+    width: 150px;
     margin: 0px 10px;
 }
 
-/* Amanhã conferir o ajuste de media query, pois a FSBOX3 cai e ajusta o tamanho segundo o celular */
+/* FIFTH SECTION */
+
+.fifth-section {
+    background: url(../img/bg1.jpg) no-repeat center;
+    background-size: cover;
+    color: whitesmoke;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+}
+
+.fifth-section h3 {
+    font-size: 1.6rem;
+    color: whitesmoke;
+}
+
+.fifth-section p {
+    align-self:  center;
+    margin-top: 25px;
+}
+
+.fstext {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    align-items: center;
+    margin: 30px 0;
+
+}
+
+.fstext button {
+    margin-top: 25px;
+}
+
+/* SIXTH SECTION */
+
+.sixth-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.infotext p {
+    width: 320px;
+}
+
+
+.info2 {
+    margin: 30px 100px;
+}
+
+.worker {
+    margin: 30px 100px;
+}
+
+.phone {
+    margin: 20px 0;
+}
+.phone p {
+    margin: 2px 0;
+}
+
+.worker img {
+    height: 375px;
+    object-fit: contain;
+    
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+}
+
+.socials img {
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    border-radius: 0;
+}
+
 
 
 
