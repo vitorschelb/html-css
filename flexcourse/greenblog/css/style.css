@@ -1,1 +1,406 @@
 @charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+    --c-1: #D4D93D;
+    --c-2: #9ABF15;
+    --c-3: #467302;
+    --c-4: #214001;
+    --c-5: #0D0D0D;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+h1 {
+    font-size: 2rem;
+    
+}
+
+.h1colored {
+    color: #9ABF15;
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+p, li {
+    font-size: 1rem;
+}
+
+/* img {
+   width: 200px;
+   height: 120px;
+   border-radius: 10px;
+   margin: 10px 0;
+
+} */
+
+img {
+    object-fit: contain;
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px;
+    resize: auto;
+}
+
+
+
+header .menu {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px;
+    flex-wrap: wrap;
+    margin: auto;
+    align-items: center;
+}
+
+header #logo {
+    font-size: 1.4rem;
+}
+
+header .btn {
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: var(--c-2);
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 6px 15px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.379);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--c-3);
+}
+
+@media (max-width: 700px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn {
+        margin-top: 15px;
+    }
+
+    .fs-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fs-div-about {
+        padding: 10%;
+        text-align: center;
+    }
+
+    .fs-div-about p {
+        text-align: justify;
+    }
+
+    .form {
+        margin: 0;
+    }
+
+    .iconsparent .icons {
+        padding: 0;
+    }
+
+    .ssparent .sstext h1 .h1colored {
+        font-size: 2.5rem;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .fsbox {
+        display: flex;
+        
+    }
+
+    .imgparent {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 389px) {
+    .fsbox img {
+        width: 100px;
+        height: 60;
+    }
+}
+
+@media (max-width: 590px) and (min-width: 400px)
+{
+    
+}
+
+
+.first-section {
+    background: url(../img/bg1.jpg) no-repeat center; 
+    background-color: rgba(0, 0, 0, 0.43);
+    background-blend-mode: multiply;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.fs-div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap ;
+}
+
+.fs-div h1 {
+    font-size: 2rem;
+    color: whitesmoke;
+}
+
+.fs-div .h1colored {
+    color: #467302;
+}
+
+.fs-div h2 {
+    font-size: 1.2rem;
+    color: whitesmoke;
+    margin-bottom: 10px;
+}
+
+.fs-div p {
+    font-size: 1rem;
+    max-width: 500px;
+    color: white;
+    margin-top: 10px;
+}
+
+/* .fs-div-about {
+    /* margin-right: 100px; */
+
+
+.form {
+    background-color: white;
+    border-radius: 10px;
+    margin: 50px 0;
+}
+
+.form h2 {
+    color: var(--c-5);
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.form2 { /*A forma como foi feito o alinhamento em colunas está errado, por que foi preciso fazer uma div em cada input, pesquisar a forma correta */
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    font-size: 1rem;
+    font-style: italic;
+    background-color: rgb(239, 229, 229);
+    border: none;
+    border-radius: 10px;
+    padding: 6px 10px;
+    margin: 5px 20px;
+
+}
+
+#submit {
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: var(--c-2);
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 6px 50px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.138);
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#submit:hover {
+    background-color: #467302;
+}
+
+.ssparent {
+    display: flex;
+    background-color: whitesmoke;
+    flex-direction: column;
+}
+
+.sstext {
+    font-size: 3rem; /*Pesquisar por que o REM desde é menos do que o do H1 da seção anterior */
+    text-align: center;
+    padding: 15px 0;
+}
+
+.sstext .h1colored {
+    color: #9ABF15;
+    font-size: 2rem;
+}
+
+.iconsparent {
+    justify-content: center;
+    display: flex;
+    gap: 10rem;
+    flex-wrap: wrap;
+}
+
+.icons {
+    text-align: center;
+    color: #9ABF15;
+    padding: 15px;
+}
+
+.iconsparent .material-symbols-outlined {
+    font-size: 50px; 
+}
+
+.icons p {
+    font-size: 1.2rem;
+    color: black;
+}
+
+/* THIRD SECTION */
+
+.tsparent {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    flex-wrap: wrap;
+    margin-top: 50px;
+
+}
+
+.list li {
+    display: flex;
+    align-items: center;
+}
+
+.tsbox1 p, .tsbox2 p {
+    width: 300px;
+}
+
+.tsbox1 h1, h2, p {
+    margin: 10px 0;
+}
+
+.tsbox1 li {
+    list-style: none;
+}
+
+.material-symbols-outlined {
+    color: #9ABF15;
+    margin-right: 4px; 
+}
+
+.tsbox2 {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    /*position absolute para rendimensionar */
+}
+
+
+.texto {
+    background: url(../img/bg1.jpg) no-repeat center;
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+    height: 150px;
+    position: relative;
+}
+
+.texto h1 {
+    color: whitesmoke;
+    right: 15px;
+    bottom: -95px;
+    position: relative;
+    text-align: end;
+}
+
+.botao {
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 10px 10px;
+}
+
+.tsbox2 button {
+    align-self: flex-end;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: var(--c-2);
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 6px 25px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.138);
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.botao p {
+    width: 200px;
+    padding: 20px 10px;
+    font-weight: bold;
+    color: rgb(128, 128, 128);
+    position: relative;
+    text-align: end;
+    right: -75px;
+    bottom: -5px;
+    font-style: italic;
+}
+
+/* FOURTH SECTION */
+
+.fourth-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.fourth-section p {
+    text-align: center;
+}
+
+.imgparent {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.fsbox {
+    flex: 1 2 175px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 250px;
+    margin: 0px 10px;
+}
+
+/* Amanhã conferir o ajuste de media query, pois a FSBOX3 cai e ajusta o tamanho segundo o celular */
+
+
+
+
+
