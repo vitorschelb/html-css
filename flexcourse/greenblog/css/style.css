@@ -436,9 +436,10 @@ input, textarea {
     
 }
 
+
 .phone {
     display: flex;
-    align-items: center;
+    justify-content: flex-start;
 }
 
 .socials img {
@@ -449,6 +450,10 @@ input, textarea {
 }
 
 @media (max-width: 600px) {
+    .phonemail {
+        display: flex;
+        justify-content: space-between;
+    }
     .menu {
         display: flex;
         flex-direction: column;
@@ -536,7 +541,11 @@ input, textarea {
 
    }
 
-   @media (max-width: 360px) {
+   @media (max-width: 400px) {
+    .phonemail {
+        display: flex;
+        justify-content: space-between;
+    }
 
     .carrossel {
         display: flex;
