@@ -537,16 +537,19 @@ input, textarea {
    }
 
    @media (max-width: 360px) {
+
+    .carrossel {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+
+    }
     .content {
         display: block;
         height: 200px;
         width: 270px;
         overflow: hidden;
         position: absolute;
-        top: 406%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        
     }
     
        .nav {
@@ -627,5 +630,4 @@ input, textarea {
     height: 80px;
     width: 80px;
     border-radius: 50%;
-}
-
+   }
